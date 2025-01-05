@@ -1,0 +1,35 @@
+<!--pages/index/index.wxml-->
+<view class="page">
+  <view class="swiper">
+    <swiper bindchange="onSwiperChange">
+      <swiper-item wx:for="{{swiperItems}}" wx:key="index">
+        <image src="{{item.imageUrl}}" mode="aspectFill"></image>
+      </swiper-item>
+    </swiper>
+
+    <view class="swiper-float-content">
+        <view wx:if="{{currentSwiperIndex === index}}" class="title" wx:for="{{swiperItems}}" wx:key="index">
+          {{item.title}}
+        </view>
+
+        <view class="descriptions-area" wx:if="{{currentSwiperIndex === index}}" wx:for="{{swiperItems}}" wx:key="index">
+          <view class="description" wx:for="{{item.config}}" wx:key="index">
+            <view class="description-title">{{item.title}}</view>
+            <view class="description-subtitle">{{item.subtitle}}</view>
+          </view>
+        </view>
+
+        <view class="action-btn">
+          预约试驾
+        </view>
+
+        <view class="view-config">
+          查看参数
+        </view>
+
+        <view class="swiper-dots">
+          <view class="dot {{currentSwiperIndex !== index  || 'active'}}" wx:for="{{swiperItems}}" wx:key="index"></view>
+        </view>
+      </view>
+  </view>
+</view>

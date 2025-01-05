@@ -1,0 +1,4 @@
+/**app.wxss**/
+swiper {
+  height:  100%;
+}

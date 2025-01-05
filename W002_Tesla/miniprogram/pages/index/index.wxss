@@ -1,0 +1,102 @@
+
+.swiper {
+  width: 100%;
+  height: 90vh;
+  position: relative;
+}
+
+.swiper image{
+  height: 100%;
+  width: 100%;
+}
+
+.swiper-float-content{
+  pointer-events: none;
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.swiper-float-content .title{
+  margin-top: 224rpx;
+  font-size: 80rpx;
+  /* font-weight: bold; */
+}
+
+.swiper-float-content .descriptions-area{
+  margin-top: 600rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 76%;
+  justify-content: space-between;
+}
+
+.swiper-float-content .descriptions-area .description{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color:#FFFFFF;
+}
+
+@keyframes fadeIn {
+  0%{
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.swiper-float-content .descriptions-area .description .description-title{
+  font-size: 40rpx;
+  margin-bottom: 12rpx;
+  animation: fadeIn 1s;
+}
+
+.swiper-float-content .descriptions-area .description .description-subtitle{
+  font-size: 25rpx;
+  animation: fadeIn 2s;
+}
+
+.swiper-float-content .action-btn{
+  margin-top: 54rpx;
+  width: 655rpx;
+  height: 74rpx;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 34rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 74rpx;
+}
+
+.swiper-float-content .view-config{
+  margin-top: 24rpx;
+  /* font-size: 25rpx; */
+  color: white;
+  text-decoration: underline;
+}
+
+.swiper-float-content .swiper-dots{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.swiper-float-content .swiper-dots .dot{
+  margin-top: 56rpx;
+  width: 42rpx;
+  height: 4rpx;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.swiper-float-content .swiper-dots .dot.active{
+  background-color: rgba(255, 255, 255, 1);
+}
